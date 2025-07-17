@@ -5,7 +5,7 @@ start:
 		--name ollama \
 		--publish 11434:11434 \
 		--volume $(PWD)/.ollama:/root/.ollama \
-		ollama/ollama:0.6.8
+		ollama/ollama:0.9.6
 	@make -s run model=qwen2.5-coder:7b
 	@echo "http://localhost:11434 \n"
 	@ifconfig | grep 192 && echo  # local ip address
