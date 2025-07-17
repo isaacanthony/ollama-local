@@ -1,0 +1,24 @@
+name: Local Assistant
+version: 1.0.0
+schema: v1
+models:
+  - name: Autodetect
+    provider: ollama
+    model: AUTODETECT
+    apiBase: http://192.168.1.158:11434
+    roles:
+      - chat
+      - autocomplete
+      - embed
+      - rerank
+      - edit
+      - apply
+      - summarize
+context:
+  - provider: code
+  - provider: docs
+  - provider: diff
+  - provider: terminal
+  - provider: problems
+  - provider: folder
+  - provider: codebase
